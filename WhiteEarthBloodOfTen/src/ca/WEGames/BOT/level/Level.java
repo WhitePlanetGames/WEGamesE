@@ -7,14 +7,14 @@ import ca.WEGames.BOT.level.tile.Tile;
 
 public class Level {
 	
-	int width, height;
+	public int width, height;
 	int[] tiles;
 	
 	public Level(int width, int height) {
 		this.width = width;
 		this.height = height;
 		tiles = new int[width * height];
-		generateLevel();
+		this.generateLevel();
 	}
 	
 	public Level(String path) {
@@ -44,16 +44,19 @@ public class Level {
 	
 	public Tile getTile(int x, int y) {
 		if(x < 0 || y < 0 || x >= width-1 || y > height-1) return Tile.gabro;
-		if(tiles[x + y * width] > 0xdf) return Tile.marble;
-		if(tiles[x + y * width] > 0xbf) return Tile.nativeGold;
+		if(tiles[x + y * width] > 0xff) return Tile.grass;
+		if(tiles[x + y * width] > 0xdf) return Tile.nativeSilver;
+		if(tiles[x + y * width] > 0xbf) return Tile.copper;
+		if(tiles[x + y * width] > 0x9f) return Tile.iron;
+		if(tiles[x + y * width] > 0x7f) return Tile.marble;
+		if(tiles[x + y * width] > 0x5f) return Tile.nativeGold;
 		return Tile.gabro;
 	}
 	
 	private void LoadLevel(String path) {
-		
 	}
 	Random random = new Random();
-	public void generateLevel() {
+	private void generateLevel() {
 		HeightMap map = new HeightMap(width, height, random.nextInt());
 		for(int y = 0; y < height; y++) {
 			for(int x = 0; x < height; x++) {

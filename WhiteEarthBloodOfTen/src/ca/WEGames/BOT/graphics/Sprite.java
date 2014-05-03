@@ -14,9 +14,13 @@ public class Sprite {
 	public int[] pixels;
 	private SpriteSheet sheet;
 	
-	public static Sprite gabro = new Sprite(16, 0, 0, SpriteSheet.sheet);
-	public static Sprite marble = new Sprite(16, 1, 0, SpriteSheet.sheet);
-	public static Sprite gold = new Sprite(16, 2, 0, SpriteSheet.sheet);
+	public static Sprite grass = new Sprite(16, 0, 0, SpriteSheet.sheet);
+	public static Sprite gabro = new Sprite(16, 1, 0, SpriteSheet.sheet);
+	public static Sprite marble = new Sprite(16, 6, 0, SpriteSheet.sheet);
+	public static Sprite gold = new Sprite(16, 4, 0, SpriteSheet.sheet);
+	public static Sprite brass = new Sprite(16, 4, 1, SpriteSheet.sheet);
+	public static Sprite copper = new Sprite(16, 4, 2, SpriteSheet.sheet);
+	public static Sprite iron = new Sprite(16, 5, 0, SpriteSheet.sheet);
 	
 	/**
 	 * 

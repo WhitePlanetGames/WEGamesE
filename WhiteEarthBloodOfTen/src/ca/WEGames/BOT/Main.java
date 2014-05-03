@@ -39,7 +39,7 @@ public class Main extends Canvas implements Runnable {
 		frame = new JFrame();
 		screen = new Screen(width, height);
 		key = new Keyboard();
-		level = new Level(1024, 1024);
+		level = new Level(256, 256);
 		
 		requestFocus();
 		addKeyListener(key);
@@ -110,14 +110,14 @@ public class Main extends Canvas implements Runnable {
 		}
 		
 		screen.clear();
-		level.render(x, y, screen);
+		level.render(width, height, screen);
 		
 		for(int i = 0; i < pixels.length; i++) {
 			pixels[i] = screen.getPixels()[i];
 		}
 		
 		Graphics g = bs.getDrawGraphics();
-		g.drawImage(image, 0, 0, width * 2, height * 2, null);
+		g.drawImage(image, 0, 0, width, height, null);
 		g.dispose();
 		bs.show();
 	}

@@ -14,9 +14,13 @@ public class Tile {
 	public int x, y;
 	public Sprite sprite;
 	
+	public static Tile grass = new GrassTile(Sprite.grass);
 	public static Tile gabro = new GabroTile(Sprite.gabro);
 	public static Tile marble = new MarbleTile(Sprite.marble);
 	public static Tile nativeGold = new GoldTile(Sprite.gold);
+	public static Tile nativeSilver = new SilverTile(Sprite.gold);
+	public static Tile iron = new IronTile(Sprite.iron);
+	public static Tile copper = new CopperTile(Sprite.copper);
 	
 	/**
 	 * @param sprite the sprite of the tile

@@ -1,0 +1,8 @@
+Player
+~~~~~~
+6 basic stats (Strength, Dexterity, Constitution, Intelect, Wisdom, Charisma).
+Has to be on center of tile though when moving between tiles it is smooth.
+Inventory.
+Holdings(eg. Cities, towns, Kingdoms).
+Multiple types of curency that changes over time.
+Technology.

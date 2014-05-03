@@ -21,7 +21,8 @@ public class RandomLevel extends Level {
 		super(width, height);
 	}
 	
-	public void generateLevel() {
+	@SuppressWarnings("unused")
+	private void generateLevel() {
 		HeightMap map = new HeightMap(width, height, random.nextInt());
 		for(int y = 0; y < height; y++) {
 			for(int x = 0; x < height; x++) {
